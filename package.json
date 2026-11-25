@@ -1,0 +1,20 @@
+{
+  "name": "ai-agents-for-business",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Open-source business operations manual and the AI agents that run it.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs && node scripts/validate.mjs"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "yaml": "^2.6.1"
+  }
+}

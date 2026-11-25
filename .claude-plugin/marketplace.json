@@ -1,0 +1,15 @@
+{
+  "name": "ai-agents-for-business",
+  "description": "Department agents built on an open business operations manual: SOPs, RACI, KPIs and human approval steps.",
+  "owner": {
+    "name": "AI Agents for Business contributors"
+  },
+  "plugins": [
+    {
+      "name": "sales",
+      "source": "./departments/sales",
+      "description": "Sales department agents built on a written operations manual: lead qualification, prospecting and outreach, discovery, proposals, pipeline review and forecast, closed-deal handoff, CRM hygiene and win/loss review. Every skill follows a numbered SOP with human approval steps.",
+      "version": "0.1.0"
+    }
+  ]
+}

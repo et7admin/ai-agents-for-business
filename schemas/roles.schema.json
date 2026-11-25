@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/et7admin/ai-agents-for-business/schemas/roles.schema.json",
+  "title": "Roles directory (roles.yaml)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["roles"],
+  "properties": {
+    "roles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "title", "department", "summary"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "title": { "type": "string" },
+          "department": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "summary": { "type": "string" },
+          "reports_to": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "also_known_as": { "type": "array", "items": { "type": "string" } },
+          "small_business_holder": { "type": "string", "description": "Who usually holds this role in a company under ~20 people." }
+        }
+      }
+    }
+  }
+}

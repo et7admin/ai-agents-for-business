@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/et7admin/ai-agents-for-business/schemas/skill.schema.json",
+  "title": "SKILL.md frontmatter (Agent Skills spec + this repo's metadata keys)",
+  "type": "object",
+  "required": ["name", "description", "metadata"],
+  "properties": {
+    "name": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "maxLength": 64 },
+    "description": { "type": "string", "minLength": 40, "maxLength": 1024 },
+    "license": { "type": "string" },
+    "compatibility": { "type": "string", "maxLength": 500 },
+    "allowed-tools": { "type": "string" },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": { "type": "string" },
+      "required": ["sop", "department", "autonomy", "version"],
+      "properties": {
+        "sop": { "type": "string", "pattern": "^[A-Z]{2,3}-SOP-[0-9]{3}(, *[A-Z]{2,3}-SOP-[0-9]{3})*$" },
+        "department": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "autonomy": { "enum": ["A0", "A1", "A2", "A3"] },
+        "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "capabilities": { "type": "string", "description": "Comma-separated connector capabilities the skill can use, e.g. 'crm, email'." }
+      }
+    }
+  }
+}

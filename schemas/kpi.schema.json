@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/et7admin/ai-agents-for-business/schemas/kpi.schema.json",
+  "title": "Department KPI file (kpis.yaml)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["department", "kpis"],
+  "properties": {
+    "department": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "kpis": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "definition", "formula", "unit", "direction", "frequency", "owner", "data_source"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[A-Z]{2,3}-KPI-[0-9]{3}$" },
+          "name": { "type": "string" },
+          "category": { "enum": ["leading", "lagging", "quality", "efficiency"] },
+          "definition": { "type": "string" },
+          "formula": { "type": "string" },
+          "unit": { "enum": ["percent", "count", "currency", "days", "hours", "minutes", "ratio", "score"] },
+          "direction": { "enum": ["higher", "lower", "target"] },
+          "frequency": { "enum": ["daily", "weekly", "monthly", "quarterly"] },
+          "owner": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "data_source": { "type": "string" },
+          "starter_target": { "type": "string", "description": "A starting point to calibrate against your own baseline. Not an industry benchmark unless a source is given." },
+          "source": { "type": "string" },
+          "pitfalls": { "type": "string" }
+        }
+      }
+    }
+  }
+}

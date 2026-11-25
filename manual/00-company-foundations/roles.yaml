@@ -1,0 +1,125 @@
+# yaml-language-server: $schema=../../schemas/roles.schema.json
+# Single registry of role IDs used in RACI charts, SOPs and agents.
+# roles-directory.md is generated from this file by `npm run build`.
+roles:
+  # Executive
+  - id: owner-ceo
+    title: Owner / CEO
+    department: executive
+    summary: Sets direction, owns final decisions on strategy, pricing policy and major commitments.
+    also_known_as: [Founder, Managing Director, President]
+    small_business_holder: The owner
+
+  # Sales
+  - id: head-of-sales
+    title: Head of Sales
+    department: sales
+    reports_to: owner-ceo
+    summary: Owns revenue targets, sales process, forecast and team performance.
+    also_known_as: [VP Sales, Sales Director, Chief Revenue Officer]
+    small_business_holder: The owner, or the most senior seller
+  - id: sales-manager
+    title: Sales Manager
+    department: sales
+    reports_to: head-of-sales
+    summary: Coaches sellers, runs pipeline reviews, approves deals within delegated limits.
+    also_known_as: [Team Lead, Regional Manager]
+    small_business_holder: Usually merged with head-of-sales
+  - id: account-executive
+    title: Account Executive
+    department: sales
+    reports_to: sales-manager
+    summary: Runs opportunities from discovery to signed contract.
+    also_known_as: [AE, Sales Rep, Closer, Business Development Manager]
+    small_business_holder: The owner or a generalist seller
+  - id: sales-development-rep
+    title: Sales Development Representative
+    department: sales
+    reports_to: sales-manager
+    summary: Qualifies inbound leads and creates new opportunities through outbound prospecting.
+    also_known_as: [SDR, BDR, Lead Qualifier, Inside Sales]
+    small_business_holder: The account executive, often with an AI agent doing the research and drafting
+  - id: solutions-engineer
+    title: Solutions Engineer
+    department: sales
+    reports_to: head-of-sales
+    summary: Shapes technical solutions, runs demos and scoping, validates feasibility before proposals.
+    also_known_as: [Sales Engineer, Pre-sales Consultant, Solutions Consultant]
+    small_business_holder: A senior delivery person pulled in per deal
+  - id: sales-operations
+    title: Sales Operations
+    department: sales
+    reports_to: head-of-sales
+    summary: Owns the CRM, data quality, reporting, forecasting mechanics and sales tooling.
+    also_known_as: [RevOps, Sales Ops Analyst, CRM Administrator]
+    small_business_holder: Whoever looks after the CRM, often the owner or an office manager
+
+  # Marketing
+  - id: head-of-marketing
+    title: Head of Marketing
+    department: marketing
+    reports_to: owner-ceo
+    summary: Owns demand generation, brand, positioning and lead flow to sales.
+    also_known_as: [Marketing Director, CMO, Marketing Manager]
+    small_business_holder: The owner or a part-time marketer
+
+  # Customer success
+  - id: head-of-customer-success
+    title: Head of Customer Success
+    department: customer-success
+    reports_to: owner-ceo
+    summary: Owns onboarding, retention, renewals and customer satisfaction.
+    also_known_as: [Customer Success Director, Head of Client Services, Head of Support]
+    small_business_holder: The owner or operations lead
+  - id: customer-success-manager
+    title: Customer Success Manager
+    department: customer-success
+    reports_to: head-of-customer-success
+    summary: Onboards new customers and owns their adoption, health and renewal.
+    also_known_as: [CSM, Account Manager, Client Manager, Project Manager]
+    small_business_holder: The person who delivers the work
+
+  # Finance
+  - id: finance-manager
+    title: Finance Manager
+    department: finance
+    reports_to: owner-ceo
+    summary: Owns billing, collections, credit checks, financial approvals and reporting.
+    also_known_as: [Controller, Bookkeeper, Office Manager, Accounts Manager]
+    small_business_holder: The bookkeeper or outsourced accountant
+
+  # Legal
+  - id: legal-counsel
+    title: Legal Counsel
+    department: legal
+    reports_to: owner-ceo
+    summary: Reviews contracts and non-standard terms, advises on legal risk.
+    also_known_as: [General Counsel, Contracts Manager, outside counsel]
+    small_business_holder: An outside lawyer engaged as needed
+
+  # Operations / delivery
+  - id: head-of-operations
+    title: Head of Operations
+    department: operations
+    reports_to: owner-ceo
+    summary: Owns delivery capacity, fulfilment, vendors and internal processes.
+    also_known_as: [COO, Operations Manager, Service Delivery Manager]
+    small_business_holder: The owner or a senior delivery lead
+
+  # People
+  - id: head-of-people
+    title: Head of People
+    department: hr
+    reports_to: owner-ceo
+    summary: Owns hiring, onboarding, policies, performance and employee relations.
+    also_known_as: [HR Manager, People Operations, HR Director]
+    small_business_holder: The owner with an outsourced HR provider
+
+  # IT
+  - id: head-of-it
+    title: Head of IT
+    department: it
+    reports_to: owner-ceo
+    summary: Owns systems, security, access, devices and IT vendors.
+    also_known_as: [IT Manager, IT Director, CIO, outsourced MSP]
+    small_business_holder: An outsourced managed service provider (MSP)

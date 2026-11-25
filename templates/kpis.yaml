@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../schemas/kpi.schema.json
+department: department-id
+kpis:
+  - id: XXX-KPI-001
+    name: Name of the measure
+    category: lagging            # leading | lagging | quality | efficiency
+    definition: Plain-English meaning.
+    formula: numerator / denominator × 100
+    unit: percent                # percent | count | currency | days | hours | minutes | ratio | score
+    direction: higher            # higher | lower | target
+    frequency: monthly           # daily | weekly | monthly | quarterly
+    owner: role-id
+    data_source: Where the numbers come from
+    starter_target: A starting point to calibrate against your own baseline
+    pitfalls: How this KPI gets gamed or misread

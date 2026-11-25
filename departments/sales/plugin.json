@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "sales",
+  "version": "0.1.0",
+  "description": "Sales department agents built on a written operations manual: lead qualification, prospecting and outreach, discovery, proposals, pipeline review and forecast, closed-deal handoff, CRM hygiene and win/loss review. Every skill follows a numbered SOP with human approval steps.",
+  "author": {
+    "name": "AI Agents for Business contributors",
+    "url": "https://github.com/et7admin/ai-agents-for-business"
+  },
+  "homepage": "https://github.com/et7admin/ai-agents-for-business/tree/main/departments/sales",
+  "repository": "https://github.com/et7admin/ai-agents-for-business",
+  "license": "MIT",
+  "keywords": ["sales", "crm", "pipeline", "forecast", "lead-qualification", "proposals", "sop", "small-business"]
+}

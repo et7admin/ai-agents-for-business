@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "hubspot": { "type": "streamable-http", "url": "https://mcp.hubspot.com/anthropic" },
+    "salesforce": { "type": "streamable-http", "url": "https://api.salesforce.com/platform/mcp/v1/platform/headless-360" },
+    "close": { "type": "streamable-http", "url": "https://mcp.close.com/mcp" },
+    "gmail": { "type": "streamable-http", "url": "https://gmailmcp.googleapis.com/mcp/v1" },
+    "google-calendar": { "type": "streamable-http", "url": "https://calendarmcp.googleapis.com/mcp/v1" },
+    "google-drive": { "type": "streamable-http", "url": "https://drivemcp.googleapis.com/mcp/v1" },
+    "microsoft-365": { "type": "streamable-http", "url": "https://microsoft365.mcp.claude.com/mcp" },
+    "apollo": { "type": "streamable-http", "url": "https://mcp.apollo.io/mcp" },
+    "outreach": { "type": "streamable-http", "url": "https://api.outreach.io/mcp/" },
+    "clay": { "type": "streamable-http", "url": "https://api.clay.com/v3/mcp" },
+    "zoominfo": { "type": "streamable-http", "url": "https://mcp.zoominfo.com/mcp" },
+    "crunchbase": { "type": "streamable-http", "url": "https://mcp.crunchbase.com/" },
+    "gong": { "type": "streamable-http", "url": "https://mcp.gong.io/mcp" },
+    "fireflies": { "type": "streamable-http", "url": "https://api.fireflies.ai/mcp" },
+    "otter": { "type": "streamable-http", "url": "https://mcp.otter.ai/mcp" },
+    "zoom": { "type": "streamable-http", "url": "https://mcp.zoom.us/mcp/zoom/streamable" },
+    "calendly": { "type": "streamable-http", "url": "https://mcp.calendly.com/" },
+    "docusign": { "type": "streamable-http", "url": "https://mcp.docusign.com/mcp" },
+    "slack": { "type": "streamable-http", "url": "https://mcp.slack.com/mcp" },
+    "notion": { "type": "streamable-http", "url": "https://mcp.notion.com/mcp" }
+  }
+}
