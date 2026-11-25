@@ -49,7 +49,7 @@ Claude Code:
 
 ```bash
 claude plugin marketplace add et7admin/ai-agents-for-business
-claude plugin install sales@ai-agents-for-business
+claude plugin install business-sales@ai-agents-for-business
 ```
 
 Other tools: copy `departments/<department>/skills/` into the skills folder your tool reads (for example `.agents/skills/` or `.claude/skills/`). See [getting started](docs/getting-started.md).

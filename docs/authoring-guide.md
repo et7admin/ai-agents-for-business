@@ -11,6 +11,7 @@ This guide is the quality bar for every department. The [Sales department](../ma
 | Role | kebab-case, e.g. `account-executive` | entry in `manual/00-company-foundations/roles.yaml` |
 | Skill | kebab-case verb phrase, e.g. `qualify-lead` | `departments/<dept>/skills/qualify-lead/SKILL.md` |
 | Agent | the role ID it plays | `departments/<dept>/agents/account-executive.md` |
+| Plugin | `business-<dept>`, e.g. `business-sales` | `name` in `departments/<dept>/plugin.json`. The prefix stops it clashing with other publishers' plugins named after a department (`sales`, `marketing`…), which would otherwise switch one of them off |
 
 Department codes: `GOV` foundations · `SAL` sales · `MKT` marketing · `CS` customer support & success · `HR` people · `IT` IT · `FIN` finance · `OPS` operations · `LEG` legal & compliance · `PRC` procurement · `PRD` product · `EXE` executive.
 

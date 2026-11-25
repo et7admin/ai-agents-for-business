@@ -10,7 +10,7 @@ Copy [`templates/business-context.md`](../templates/business-context.md) to a fi
 
 ```bash
 claude plugin marketplace add et7admin/ai-agents-for-business
-claude plugin install sales@ai-agents-for-business
+claude plugin install business-sales@ai-agents-for-business
 ```
 
 Put `business-context.md` in your working folder. Skills load when they're relevant ("qualify this lead…", "prep me for my discovery call with…"), and role agents such as `account-executive` are available as subagents.

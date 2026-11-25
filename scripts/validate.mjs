@@ -175,7 +175,7 @@ for (const dept of depts) {
     else {
       const p = readJson(pfile);
       if (p.$schema !== 'https://agent-plugins.org/schemas/1.0.0/plugin.schema.json') err(pfile, '$schema must be the Agent Plugins 1.0.0 plugin schema URL');
-      if (p.name !== dept) err(pfile, `name "${p.name}" should be "${dept}"`);
+      if (p.name !== `business-${dept}`) err(pfile, `name "${p.name}" should be "business-${dept}" (the prefix avoids clashing with other publishers' department plugins)`);
       if (!/^[a-z0-9](?:[a-z0-9.-]{0,62}[a-z0-9])?$/.test(p.name ?? '') || /--|\.\./.test(p.name ?? '')) err(pfile, 'name violates the Agent Plugins name rules');
       if (p.version && !/^\d+\.\d+\.\d+/.test(p.version)) err(pfile, 'version must be semver');
     }

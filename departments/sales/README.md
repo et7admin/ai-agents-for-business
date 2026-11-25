@@ -33,7 +33,7 @@ The agent side of the [Sales manual](../../manual/sales/). Every skill carries o
 **Claude Code**
 ```bash
 claude plugin marketplace add et7admin/ai-agents-for-business
-claude plugin install sales@ai-agents-for-business
+claude plugin install business-sales@ai-agents-for-business
 ```
 
 **Other Agent Skills tools:** copy `skills/*` into the skills folder your tool reads. Tools that support Agent Plugins 1.0 can load this folder directly (`plugin.json` is at its root).
